@@ -1,28 +1,27 @@
+# Django API with React Todo App
 
-# [Django API with React Todo App](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C0%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^1^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C0%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)
-
-This project is a full-stack application that demonstrates how to build a **Django API** and connect it to a  **React frontend** . [The app allows users to log in, create, view, edit, and complete todos](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C1%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^2^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C1%7Ce4f151fb-dbb2-40af-817f-f55410969e0a).
+This project is a full-stack application that demonstrates how to build a **Django API** and connect it to a  **React frontend** . The app allows users to log in, create, view, edit, and complete todos.
 
 ## Table of Contents
 
-* [Introduction](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#introduction)
-* [Features](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#features)
-* [Installation](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#installation)
-* [Usage](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#usage)
-* [Technologies Used](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#technologies-used)
-* [Contributing](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#contributing)
-* [License](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#license)
+* Introduction
+* Features
+* Installation
+* Usage
+* Technologies Used
+* Contributing
+* License
 
 ## Introduction
 
-[This project is designed to self learn, how to build a RESTful web API with Django and Django REST Framework, and connect it to a React frontend](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C2%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^3^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C2%7Ce4f151fb-dbb2-40af-817f-f55410969e0a). The app is a simple Todo application where users can manage their tasks.
+This project is designed to self learn, how to build a RESTful web API with Django and Django REST Framework, and connect it to a React frontend. The app is a simple Todo application where users can manage their tasks.
 
 ## Features
 
 * **User Authentication** : Sign up and log in with token-based authentication.
 * **CRUD Operations** : Create, read, update, and delete todos.
 * **Permissions** : Users can only manage their own todos.
-* [ **Deployment** : Backend deployed on PythonAnywhere and frontend on Netlify](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C3%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^4^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C3%7Ce4f151fb-dbb2-40af-817f-f55410969e0a).
+* [ **Deployment** : ](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C3%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)Backend deployed on PythonAnywhere and frontend on Netlify.
 
 ## Installation
 
@@ -94,7 +93,7 @@ This project is a full-stack application that demonstrates how to build a **Djan
 
 ## Technologies Used
 
-* [ **Backend** : Django, Django REST Framework](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C10%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^11^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C10%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)
+* [ **Backend** : ](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C10%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)Django, Django REST Framework
 * **Frontend** : React, React Bootstrap
 * **Database** : SQLite (default), MySQL(Online).
 * **Deployment** : PythonAnywhere (backend), Netlify (frontend)

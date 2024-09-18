@@ -35,6 +35,7 @@ function App(){
     <div className="App">
       <Navbar bg="primary" variant="dark">
         <div className="container-fluid">
+          {/* Navigation bar */}
           <Navbar.Brand>Todo App</Navbar.Brand>
           <Nav className="me-auto">
             <Container>
@@ -51,7 +52,44 @@ function App(){
           </Nav>
         </div>
       </Navbar>
-      <h3 style={{textAlign:'center'}}>Hello React App</h3>
+
+      <div className="container mt-4">
+        <Switch>
+          <Route exact path={['/','/todos']} render={(prop)=>
+          <TodoList{...prop} token={token}/>
+          }>
+          </Route>
+          <Route path='/todos/create' render={(prop)=>
+          <AddTodo{...prop} token={token}/>
+          }>
+          </Route>
+          <Route path="/todos/:id/" render={(prop)=>
+          <AddTodo{...prop} token={token}/>
+          }>
+          </Route>
+          <Route path="/login" render={(prop)=>
+          <Login{...prop} token={login}/>
+          }>
+          </Route>
+          <Route path="/todos/create" render={(prop)=>
+          <Signup{...prop} token={signup}/>
+          }>
+          </Route>
+          </Switch>
+      </div>
+      {/* footer */}
+      <footer className="text-center text-lg-start
+      bg-light text-muted mt-4">
+        <div className="text-center p-4">
+          ©Copyright
+          <a target="_blank"
+             className="text-reset fw-bold text-decoration-none"
+             href="#"> Developer1 </a>
+          - <a target="_blank"
+               className="text-reset fw-bold text-decoration-none"
+               href="#"> Developer2 </a>
+        </div>
+      </footer>
     </div>
     
   );
