@@ -1,112 +1,72 @@
+# Django API with React Todo App
 
-# [Django API with React Todo App](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C0%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^1^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C0%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)
+This project is a full-stack application demonstrating how to build a Django API and connect it to a React frontend. The app allows users to log in, create, view, edit, and complete todos.
 
-This project is a full-stack application that demonstrates how to build a **Django API** and connect it to a  **React frontend** . [The app allows users to log in, create, view, edit, and complete todos](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C1%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^2^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C1%7Ce4f151fb-dbb2-40af-817f-f55410969e0a).
+Table of Contents
+ * Introduction
+ * Features
+ * Installation
+ * Usage
+ * Technologies Used
+ * Contributing
+ * License
 
-## Table of Contents
+Introduction
+This project is designed to showcase how to build a RESTful web API with Django and Django REST Framework, and connect it to a React frontend. The app is a simple Todo application where users can manage their tasks.
 
-* [Introduction](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#introduction)
-* [Features](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#features)
-* [Installation](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#installation)
-* [Usage](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#usage)
-* [Technologies Used](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#technologies-used)
-* [Contributing](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#contributing)
-* [License](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#license)
+Features
+ * User Authentication: Sign up and log in with token-based authentication.
+ * CRUD Operations: Create, read, update, and delete todos.
+ * Permissions: Users can only manage their own todos.
+ * Deployment: Backend deployed on PythonAnywhere and frontend on Netlify.
 
-## Introduction
+Installation
 
-[This project is designed to self learn, how to build a RESTful web API with Django and Django REST Framework, and connect it to a React frontend](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C2%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^3^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C2%7Ce4f151fb-dbb2-40af-817f-f55410969e0a). The app is a simple Todo application where users can manage their tasks.
-
-## Features
-
-* **User Authentication** : Sign up and log in with token-based authentication.
-* **CRUD Operations** : Create, read, update, and delete todos.
-* **Permissions** : Users can only manage their own todos.
-* [ **Deployment** : Backend deployed on PythonAnywhere and frontend on Netlify](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C3%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^4^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C3%7Ce4f151fb-dbb2-40af-817f-f55410969e0a).
-
-## Installation
-
-### Backend
-
-1. **Clone the repository** :
-
-```bash
+Backend
+ * Clone the repository:
    git clone <repository-url>
-   cd <repository-directory>
-```
+cd <repository-directory>
 
-1. **Create a virtual environment** :
-
-```bash
+ * Create a virtual environment:
    python3 -m venv env
-   source env/bin/activate
-```
+source env/bin/activate
 
-1. **Install dependencies** :
-
-```bash
+ * Install dependencies:
    pip install -r requirements.txt
-```
 
-1. **Run migrations** :
+ * Run migrations:
+   python manage.py makemigrations
+python manage.py migrate
 
-```bash
-   python manage.py makemigrations[^5^][5][^6^][6]
-   python manage.py migrate[^7^][7][^8^][8]
-```
+ * Create a superuser:
+   python manage.py createsuperuser
 
-1. **Create a superuser** :
+ * Run the server:
+   python manage.py runserver
 
-```bash
-   python manage.py createsuperuser[^9^][9]
-```
-
-1. **Run the server** :
-
-```bash
-   python manage.py runserver[^10^][10]
-```
-
-### Frontend
-
-1. **Navigate to the frontend directory** :
-
-```bash
+Frontend
+ * Navigate to the frontend directory:
    cd frontend
-```
 
-1. **Install dependencies** :
-
-```bash
+ * Install dependencies:
    npm install
-```
 
-1. **Start the React app** :
-
-```bash
+ * Start the React app:
    npm start
-```
 
-## Usage
 
-1. **Access the backend** at `http://localhost:8000/admin` to manage todos.
-2. **Access the frontend** at `http://localhost:3000` to interact with the Todo app.
+Usage
+ * Access the backend at http://localhost:8000/admin to manage todos.
+ * Access the frontend at http://localhost:3000 to interact with the Todo app.
 
-## Technologies Used
+Technologies Used
+ * Backend: Django, Django REST Framework
+ * Frontend: React, React Bootstrap
+ * Database: SQLite (default), MySQL(Online).
+ * Deployment: PythonAnywhere (backend), Netlify (frontend)
 
-* [ **Backend** : Django, Django REST Framework](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C10%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^11^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C10%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)
-* **Frontend** : React, React Bootstrap
-* **Database** : SQLite (default), MySQL(Online).
-* **Deployment** : PythonAnywhere (backend), Netlify (frontend)
-
-## Contributing
-
+Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
-
-## License
-
+License
 This project is licensed under the MIT License.
-
----
-
 Feel free to customize this README to better fit your project’s specifics!
