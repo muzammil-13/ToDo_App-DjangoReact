@@ -1,6 +1,3 @@
-    Sure! Here’s a draft for your README file:
-
----
 
 # [Django API with React Todo App](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C0%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)[^1^](https://edgeservices.bing.com/edgesvc/chat?udsframed=1&form=SHORUN&clientscopes=chat,noheader,udsedgeshop,channelstable,ntpquery,devtoolsapi,udsinwin11,udsdlpconsent,udsfrontload,cspgrd,&shellsig=2afeaecece2da8719abc13dbe05ad9b354873725&setlang=en-GB&darkschemeovr=1&udsps=0&udspp=0#sjevt%7CDiscover.Chat.SydneyClickPageCitation%7Cadpclick%7C0%7Ce4f151fb-dbb2-40af-817f-f55410969e0a)
 
