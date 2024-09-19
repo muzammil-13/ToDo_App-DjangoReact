@@ -24,7 +24,7 @@ class TodoDataService{
     }
 
     completeTodo(id,token){
-        axios.default.headers.common["Authorization"]="Token"+token;
+        axios.defaults.headers.common["Authorization"]="Token"+token;
         return axios.put("http://127.0.0.1:8000/api/todoApp/${id}/complete");
     }
 
@@ -32,7 +32,7 @@ class TodoDataService{
         return axios.post("http://127.0.0.1:8000/api/login/",data);
     }
 
-    singup(data){
+    signup(data){
         return axios.post("http://127.0.0.1:8000/api/signup/",data);
     }
 }
