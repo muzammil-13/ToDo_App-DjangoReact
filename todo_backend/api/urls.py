@@ -6,6 +6,5 @@ urlpatterns=[
     path('todoApp/<int:pk>',views.TodoRetrieveUpdateDestroy.as_view()),
     path('todoApp/<int:pk>/complete',views.TodoToggleComplete.as_view()),
     path('signup/',views.signup),
-    path('signup/',views.signup),
     path('login/',views.login),
 ]
