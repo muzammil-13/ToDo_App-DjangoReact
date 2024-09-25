@@ -13,7 +13,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Navbar';
 
-import TodoDataService from './services/todo';
+import TodoDataService from './services/todos';
 
 function App(){
   // const user=null;
@@ -66,7 +66,7 @@ function App(){
           <Navbar.Brand>Todo App</Navbar.Brand>
           <Nav className="me-auto">
             <Container>
-              <Link class="nav-link" to={"/todo"}>To Dos</Link>
+              <Link class="nav-link" to={"/todos"}>To Dos</Link>
               {user ?(
                 <Link class="nav-link" onClick={logout}>Logout ({user})</Link>
               ):(
@@ -83,15 +83,15 @@ function App(){
 
       <div className="container mt-4">
         <Switch>
-          <Route exact path={['/','/todo']} render={(props)=>
+          <Route exact path={['/','/todos']} render={(props)=>
           <TodoList{...props} token={token}/>
           }>
           </Route>
-          <Route path='/todo/create' render={(props)=>
+          <Route path='/todos/create' render={(props)=>
           <AddTodo{...props} token={token}/>
           }>
           </Route>
-          <Route path="/todo/:id/" render={(props)=>
+          <Route path="/todos/:id/" render={(props)=>
           <AddTodo{...props} token={token}/>
           }>
           </Route>
@@ -99,7 +99,7 @@ function App(){
           <Login{...props} login={login}/>
           }>
           </Route>
-          <Route path="/todo/create" render={(props)=>
+          <Route path="/todos/create" render={(props)=>
           <Signup{...props} signup={signup}/>
           }>
           </Route>
