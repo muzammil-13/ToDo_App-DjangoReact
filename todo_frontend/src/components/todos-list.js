@@ -33,6 +33,11 @@ return(
             </Alert>
         ):(
             <div>
+                <Link to={"/todo/create"}>
+                <Button variant="outline-info" className="mb-3">
+                    Add To-Do
+                </Button>
+                </Link>
                 {todos.map((todo)=>{
             return(
                 <Card key={todo.id} className="mb-3">
@@ -44,7 +49,7 @@ return(
                             </Card.Text>
                         </div>
                         <Link to={{
-                            pathname:"/todo/"+todo.id,
+                            pathname:"/todos/"+todo.id,
                             state:{
                                 CurrentTodo:todo
                             }

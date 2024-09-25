@@ -18,6 +18,12 @@ const AddTodo=props=>{
     let initialTodoTitle="";
     let initialTodoMemo="";
 
+    if(props.location.state && props.location.state.currentTodo){
+        editing=true;
+        initialTodoTitle=props.location.state.currentTodo.title;
+        initialTodoMemo=props.location.state.currentTodo.memo;
+    }
+
     const[title,setTitle]=useState(initialTodoTitle);
     const[memo, setMemo]=useState(initialTodoMemo);
     // keeps track if todo is submitted
@@ -40,6 +46,19 @@ const AddTodo=props=>{
             completed:false,
         }
 
+        if(editing){
+            TodoDataService.updateTodo(
+                props.location.state.currentTodo.id,
+                data,props.token)
+                .then(response=>{
+                    setSubmitted(true);
+                    console.log(response.data)
+                })
+                .catch(e=>{
+                    console.log(e);
+                })
+        }
+        else{
         TodoDataService.createTodo(data,props.token)
         .then(response=>{
             setSubmitted(true);
@@ -47,6 +66,7 @@ const AddTodo=props=>{
         .catch(e=>{
             console.log(e);
         });
+    }
     }
 
     return(
