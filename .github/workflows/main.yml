@@ -1,0 +1,52 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ] # Trigger on pushes to the main branch
+  pull_request:
+    branches: [ main ] # Trigger on pull requests to the main branch
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Or your preferred Node.js version
+
+      - name: Install Frontend Dependencies
+        working-directory: ./todo_frontend
+        run: npm install
+
+      - name: Build Frontend
+        working-directory: ./todo_frontend
+        run: npm run build
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # Or your preferred Python version
+
+      - name: Install Backend Dependencies
+        working-directory: ./todo_backend 
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Run Backend Tests
+        working-directory: ./todo_backend
+        run: |
+          source .venv/bin/activate
+          python manage.py test 
+
+  # (Optional) Deploy Stage
+  deploy:
+    needs: build-and-test # Only run if the build-and-test job succeeds
+    runs-on: ubuntu-latest
+    # ... Deployment steps (see below)
