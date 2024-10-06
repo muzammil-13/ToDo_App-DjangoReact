@@ -60,6 +60,7 @@ function App(){
   return(
     <div className="App">
       <Navbar bg="primary" variant="dark">
+        
         <div className="container-fluid">
 
           {/* Navigation bar */}
@@ -99,7 +100,7 @@ function App(){
           <Login{...props} login={login}/>
           }>
           </Route>
-          <Route path="/todos/create" render={(props)=>
+          <Route path="/signup" render={(props)=>
           <Signup{...props} signup={signup}/>
           }>
           </Route>
@@ -108,7 +109,7 @@ function App(){
 
       {/* footer */}
       <footer className="text-center text-lg-start
-      bg-light text-muted mt-4">
+      bg-light text-muted mt-4 ">
         <div className="text-center p-4">
           ©Copyright
           <a target="_blank"

@@ -1,106 +1,104 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import TodoDataService from '../services/todos';
-import {Link} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Alert from 'react-bootstrap/Alert';
 
-// function AddTodo(){
-//     return(
-//         <div className="App">
-//             Add Todo
-//         </div>
-//     );
-// }
+const AddTodo = props => {
+    const history = useHistory();
+    let editing = false;
+    let initialTodoTitle = "";
+    let initialTodoMemo = "";
 
-const AddTodo=props=>{
-    let editing=false;
-    let initialTodoTitle="";
-    let initialTodoMemo="";
-
-    if(props.location.state && props.location.state.currentTodo){
-        editing=true;
-        initialTodoTitle=props.location.state.currentTodo.title;
-        initialTodoMemo=props.location.state.currentTodo.memo;
+    if (props.location.state && props.location.state.currentTodo) {
+        editing = true;
+        initialTodoTitle = props.location.state.currentTodo.title;
+        initialTodoMemo = props.location.state.currentTodo.memo;
     }
 
-    const[title,setTitle]=useState(initialTodoTitle);
-    const[memo, setMemo]=useState(initialTodoMemo);
-    // keeps track if todo is submitted
-    const[submitted, setSubmitted]=useState(false);
+    const [title, setTitle] = useState(initialTodoTitle);
+    const [memo, setMemo] = useState(initialTodoMemo);
+    const [submitted, setSubmitted] = useState(false);
+    const [error, setError] = useState("");
 
-    const onChangeTitle=e=>{
-        const title=e.target.value;
+    const onChangeTitle = e => {
+        const title = e.target.value;
         setTitle(title);
     }
 
-    const onChangeMemo=e=>{
-        const memo=e.target.value;
+    const onChangeMemo = e => {
+        const memo = e.target.value;
         setMemo(memo);
     }
 
-    const saveTodo=()=>{
-        var data={
-            title:title,
-            memo:memo,
-            completed:false,
+    const saveTodo = () => {
+        setError("");
+        var data = {
+            title: title,
+            memo: memo,
+            completed: false,
         }
 
-        if(editing){
+        if (editing) {
             TodoDataService.updateTodo(
                 props.location.state.currentTodo.id,
-                data,props.token)
-                .then(response=>{
+                data, props.token)
+                .then(response => {
                     setSubmitted(true);
-                    console.log(response.data)
+                    console.log(response.data);
+                    setTimeout(() => history.push("/todos"), 1500);
                 })
-                .catch(e=>{
+                .catch(e => {
                     console.log(e);
+                    setError("Failed to update todo. Please try again.");
                 })
+        } else {
+            TodoDataService.createTodo(data, props.token)
+                .then(response => {
+                    setSubmitted(true);
+                    console.log(response.data);
+                    setTimeout(() => history.push("/todos"), 1500);
+                })
+                .catch(e => {
+                    console.log(e);
+                    setError("Failed to create todo. Please try again.");
+                });
         }
-        else{
-        TodoDataService.createTodo(data,props.token)
-        .then(response=>{
-            setSubmitted(true);
-        })
-        .catch(e=>{
-            console.log(e);
-        });
-    }
     }
 
-    return(
+    return (
         <Container>
-            {submitted?(
+            {error && <Alert variant="danger">{error}</Alert>}
+            {submitted ? (
                 <div>
                     <h4>Todo submitted successfully</h4>
-                    <Link to={"/todos/"}>
-                    Back to Todos
-                    </Link>
+                    <p>Redirecting to todo list...</p>
                 </div>
-            ):(
+            ) : (
                 <Form>
                     <Form.Group className="mb-3">
-                        <Form.Label>{editing?"Edit":"Create"} Todo</Form.Label>
+                        <Form.Label>{editing ? "Edit" : "Create"} Todo</Form.Label>
                         <Form.Control
-                        type="text"
-                        required
-                        placeholder="buy xx tomorrow"
-                        value={title}
-                        onChange={onChangeTitle}
+                            type="text"
+                            required
+                            placeholder="Enter todo title"
+                            value={title}
+                            onChange={onChangeTitle}
                         />
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>Description: </Form.Label>
                         <Form.Control
-                        as="textarea"
-                        rows={3}
-                        value={memo}
-                        onChange={onChangeMemo}
+                            as="textarea"
+                            rows={3}
+                            value={memo}
+                            onChange={onChangeMemo}
                         />
                     </Form.Group>
                     <Button variant="info" onClick={saveTodo}>
-                        {editing?"Edit":"Add"} To-do
+                        {editing ? "Edit" : "Add"} To-do
                     </Button>
                 </Form>
             )}

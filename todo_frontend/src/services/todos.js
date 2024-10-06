@@ -1,39 +1,39 @@
 import axios from 'axios';
-// We use a library called axios for sending get, post, put and delete requests.
 
-class TodoDataService{
+const API_BASE_URL = "http://localhost:8000/api";
 
-    getAll(token){
-        axios.defaults.headers.common['Authorization']="Token"+token;
-        return axios.get("http://localhost:8000/api/todoApp/");
+class TodoDataService {
+    getAll(token) {
+        axios.defaults.headers.common['Authorization'] = `Token ${token}`;
+        return axios.get(`${API_BASE_URL}/todoApp/`);
     }
 
-    createTodo(data,token){
-        axios.defaults.headers.common["Authorization"]="Token"+token;
-        return axios.post("http://127.0.0.1:8000/api/todoApp/",data);
+    createTodo(data, token) {
+        axios.defaults.headers.common["Authorization"] = `Token ${token}`;
+        return axios.post(`${API_BASE_URL}/todoApp/`, data);
     }
 
-    updateTodo(id,data,token){
-        axios.defaults.headers.common["Authorization"]="Token"+token;
-        return axios.put("http://127.0.0.1:8000/api/todoApp/${id}",data);
+    updateTodo(id, data, token) {
+        axios.defaults.headers.common["Authorization"] = `Token ${token}`;
+        return axios.put(`${API_BASE_URL}/todoApp/${id}`, data);
     }
 
-    deleteTodo(id,token){
-        axios.defaults.headers.common["Authorization"]="Token"+token;
-        return axios.delete("http://127.0.0.1:8000/api/todoApp/${id}/complete");
+    deleteTodo(id, token) {
+        axios.defaults.headers.common["Authorization"] = `Token ${token}`;
+        return axios.delete(`${API_BASE_URL}/todoApp/${id}/complete`);
     }
 
-    completeTodo(id,token){
-        axios.defaults.headers.common["Authorization"]="Token"+token;
-        return axios.put("http://127.0.0.1:8000/api/todoApp/${id}/complete");
+    completeTodo(id, token) {
+        axios.defaults.headers.common["Authorization"] = `Token ${token}`;
+        return axios.put(`${API_BASE_URL}/todoApp/${id}/complete`);
     }
 
-    login(data){
-        return axios.post("http://127.0.0.1:8000/api/login/",data);
+    login(data) {
+        return axios.post(`${API_BASE_URL}/login/`, data);
     }
 
-    signup(data){
-        return axios.post("http://127.0.0.1:8000/api/signup/",data);
+    signup(data) {
+        return axios.post(`${API_BASE_URL}/signup/`, data);
     }
 }
 
